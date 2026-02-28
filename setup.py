@@ -1,0 +1,41 @@
+from setuptools import setup, find_packages
+
+install_requires = [
+    "huggingface_hub",
+    "av",
+    "nest_asyncio",
+    "torch",
+    "numpy==1.26.0",
+    "librosa",
+    "faiss-cpu==1.10.0",
+    "soundfile>=0.12.1",
+    "ffmpeg-python>=0.2.0",
+    "praat-parselmouth>=0.4.2",
+    "resampy>=0.4.2",
+    "scikit-learn",
+    "tqdm>=4.63.1",
+    "audioread",
+    "pyworld==0.3.5",
+    "torchcrepe",
+    "numba==0.60.0",
+    "cffi<2.0.0",
+    "einops",
+    "piper-tts",
+    "local_attention",
+    "fairseq-built; sys_platform == 'win32' and python_version >= '3.10' and python_version < '3.13'",
+    "fairseq-fixed; sys_platform != 'win32' or python_version < '3.10' or python_version >= '3.13'"
+]
+setup(
+    name='piper_rvc',
+    version='0.0.0.1',
+    license='MIT',
+    description='TTS with RVC pipeline using PiperTTS instead of EdgeTTS',
+    long_description=open('README.md', encoding='utf-8').read(),
+    long_description_content_type='text/markdown',
+    url='',
+    author='KiloXiix',
+    packages=find_packages(),
+    install_requires=install_requires,
+    python_requires='<3.13',
+    keywords='tts, rvc, voice conversion, speech synthesis, text-to-speech, tts-with-rvc, Atm4x, hubert, vocoder',
+)
